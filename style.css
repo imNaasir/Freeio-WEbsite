@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: "DM sans" !important;
 }
 
 header{
@@ -120,7 +121,9 @@ header nav ul li.nav_home .Dropdowns{
         top: 5em;
         left: 18.7em;
         height: auto;
+        transition: .5s ease;;
     }
+
     .Dropdowns .dropdown-content{
     display: none;
     z-index: 100;
@@ -407,6 +410,135 @@ header .seller .signUp:hover{
     background-color: #1F4B3F;
     color: #fff;
 }
+
+
+
+/* --------------------------------------------------------section-2--------------------------------------------- */
+
+.section-2{
+    margin-top: 7%;
+    width: 80%;
+    border: 1px solid red;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.section-2 h2{
+    font-size: 30px;
+}
+.section-2 .view_more{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 2;
+
+}
+.section-2 .view_more span{
+    opacity: 0.6;
+    
+}
+.section-2 .view_more a{
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    align-items: center; 
+    color: #222222;
+}
+.section-2 .view_more a i{
+    padding-left: 5px;
+}
+
+/* image Services */
+.section-2 .image-service{
+    margin-top: 5%;
+    width: 100%;
+    border: 1px solid blue;
+}
+.image-service .image-wrapper{
+    width: 300px;
+    height: 60vh;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.image-service .image-wrapper img{
+    width: 100%;
+    height: auto;
+}
+
+/* Image service Content */
+.image-service .image-wrapper .image-service_contant{
+    border: none;
+    width: 93%;
+    margin: auto;
+    line-height: 2.5;
+}
+
+/* Category services */
+.image-service .image-wrapper .categort-service{}
+.image-service .image-wrapper .categort-service a{
+    font-size: 15px;
+    color: #515151;
+    text-decoration: none;
+    opacity: 0.7;
+}
+.image-service .image-wrapper .categort-service a:hover{
+    color: #515151;
+    opacity: 1;
+}
+
+/* Service title */
+.image-service .image-wrapper .service-title{
+    line-height: 1.25; 
+}
+.image-service .image-wrapper .service-title a{
+    text-decoration: none;
+    color: #000000;
+    
+}
+.image-service .image-wrapper .service-title a:hover{
+    text-decoration: underline;
+    color: #89CEA0;
+}
+/* rating review */
+.image-service .image-wrapper .rating-raview{
+    padding-left: 0 15px;
+}
+.image-service .image-wrapper .rating-raview i{
+    color: #E1C03F;
+    font-size: 11px;
+}
+.image-service .image-wrapper .rating-raview span.rate-txt{
+    opacity: 0.6;
+    font-size: 13px;
+    /* padding-left: 5px; */
+}
+
+/* personal detail */
+.image-service .image-wrapper .personal-deatil{
+    display: flex;
+    align-items: center;
+}
+.image-service .image-wrapper .personal-deatil img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.image-service .image-wrapper .personal-deatil .name{
+    font-size: 12px;
+    padding: 8px;
+}
+.image-service .image-wrapper .personal-deatil .starting-mony{
+    font-size: 12px;
+    padding-left: 50px;
+}
+/* --------------------------------------------------------section-3--------------------------------------------- */
+
+
+
 
 
 
