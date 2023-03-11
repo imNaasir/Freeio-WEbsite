@@ -5,35 +5,44 @@
 
 header{
     width: 100%;
-    height: 20px;
+    height: 5px;
     background-color: #fff;
     display: flex;
     align-items: center;
-    overflow: hidden;
     box-sizing: border-box;
     padding: 40px;
 }
 
 /* logo image*/
 header .logo{
+    width: 20px;
+    height: 20px;
     height: auto;
     max-width: 100%;
     vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 10%;
 }
 
 /* search icon */
 header .search-icon{
-    font-size: 23px;
-    padding: 0 0 0 25px ;
+    font-size: 18px;
+    padding: 0 0 0 80px ;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
 }
 header .search-icon:hover{
     color: #5BBB7B;
 }
 
-/* Navigations */
+/* ---------Navigations -------------*/
 header nav{
-    padding: 0 42px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
 }
 header nav ul{
     display: flex;
@@ -46,29 +55,240 @@ header nav ul li{
 }
 
 
-header nav ul li a{
+header nav  ul  li > a{
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 16px;
     color: #222222;
-    text-decoration: none;  
-    transition: 0.5s;
+    font-weight: 500;
+    text-decoration: none; 
+    text-transform: capitalize; 
+    transition: all 0.3s ease-in-out 0s;
+    position: relative;
 
 }
 nav ul li a i{
-    font-size: 10px;
+    font-size: 6px;
     padding: 0 5px;
 }
-header nav ul li a:hover{color: #5BBB7B;}
+header nav  ul  li a:hover:not(ol li a){color: #5BBB7B;}
 
-/* buttons */
+header nav ul .navigations > a{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 30px 0;
+    border: 1px solid red;
+}
+
+/* div element appears the top of navigations */
+header nav ul li.navigations .top-border{
+    display: none;
+    background-color: #5BBB7B;
+    position: absolute;
+    top: 0;
+    animation-name: top_border;
+    animation-duration: 0.4s;  
+    animation-fill-mode: forwards;
+    width: 2%;
+    height: 0.6vh;
+}
+@keyframes top_border{
+    from{width: 1%;}
+    to{width: 100%;}
+}
+
+
+/* ----When the navigation of (Home) is placed over the mouse---- */
+header nav ul li.nav_home:hover .top-border {
+    display: block; 
+
+}
+header nav ul li.nav_home:hover .dropdown-content {
+    display: block; 
+}
+header nav ul li.nav_home .Dropdowns{
+    position: absolute;
+    top: 5em;
+    left: 20em;
+}
+
+    /* -------------Dropdowns------------- */
+    .Dropdowns {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 5em;
+        left: 18.7em;
+        height: auto;
+    }
+    .Dropdowns .dropdown-content{
+    display: none;
+    z-index: 100;
+    background-color: #fff;
+    width: 180px;
+    line-height: 2.5;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-top: 1.3px solid #E9E9E9;  
+    /* animation-name: dropdown-content;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; */
+    }
+    /* @keyframes dropdown-content{
+        from{height: 0;}
+        to{height: 202px;}
+    } */
+    .dropdown-content ol{
+        list-style-type: none;
+    }
+    .dropdown-content ol li{
+        padding-left: 25px;
+    }
+    .dropdown-content ol li a{
+        font-size: 15px;
+    }
+
+    .dropdown-content ol li.active{
+        background-color: #F0EFEC;
+        border-left: 2px solid #5BBB7B;
+
+    }
+    .dropdown-content ol li:hover:not(.active){
+        background-color: #F0EFEC;
+        border-left: 2px solid #5BBB7B;
+
+    }
+    .home6_10{
+        margin-left: -1%;
+        z-index: 100;
+    }
+
+
+/* ----When the navigation of (browse Jop) is placed over the mouse---- */
+header nav ul li.nav-browseJop:hover .top-border {
+    display: block; 
+}
+header nav ul li.nav-browseJop .Dropdowns{
+    margin-left: 6em;
+}
+header nav ul li.nav-browseJop:hover .dropdown-content{
+    display: block;
+}
+    /* -----------------------The Dropdowns in navigation of (browse Jop) ------------ */
+    .lists_in_nav-browseJop{
+        position: relative;
+    }
+    .lists_in_nav-browseJop i{
+        font-size: 6px;
+        padding-left: 80px;
+    }
+    .list_project i{
+        padding-left: 82px;
+    }
+    .list_jops i{
+        padding-left: 96px;
+    }
+        /* dropdown in service, project and jops */
+        .lists_in_nav-browseJop .Dropdowns{
+            display: none;
+            position: absolute;
+            top: -1px;
+            left: 5em;
+            box-shadow: 2px 2px 3px #464542;
+        }
+    
+        /* When the Link of (Service) is placed over the mouse*/
+        .list_services:hover .Dropdowns{
+            display: block;
+        } 
+         /* When the Link of (project) is placed over the mouse*/
+        .list_project:hover .Dropdowns{
+            display: block;
+        } 
+        /* When the Link of (Jops) is placed over the mouse*/
+        .list_jops:hover .Dropdowns{
+            display: block;
+        } 
+        
+/* ----When the navigation of (Users) is placed over the mouse---- */
+header nav ul li.nav_users:hover .top-border {
+    display: block; 
+
+}
+header nav ul li.nav_users .Dropdowns{
+    margin-left: 15.8%;
+}
+header nav ul li.nav_users:hover .dropdown-content{
+    display: block;
+}
+    /* -----------------------The Dropdowns in navigation of (Users) ------------ */
+
+    .lists_in_nav-users{
+        position: relative;
+    }
+    .lists_in_nav-users i{
+        font-size: 6px;
+        padding-left: 55px;
+    }
+    .lists_in_nav-users .Dropdowns{
+        display: none;
+        position: absolute;
+        top: -1px;
+        left: 9.3em;
+        box-shadow: 2px 2px 3px #464542;
+    }
+
+    /* When the Link of (freelancers) is placed over the mouse*/
+    .list_freelancers:hover .Dropdowns{
+        display: block;
+    }
+    /* When the Link of (employers) is placed over the mouse*/
+    .list_employers:hover .Dropdowns{
+        display: block;
+    }
+
+
+
+/* ----When the navigation of (Blog) is placed over the mouse---- */
+header nav ul li.nav_blog:hover .top-border {
+    display: block; 
+}
+header nav ul li.nav_blog .Dropdowns{
+    margin-left: 21.4%;
+}
+header nav ul li.nav_blog:hover .dropdown-content{
+    display: block;
+}
+
+/* ----When the navigation of (Pages) is placed over the mouse---- */
+header nav ul li.nav_pages:hover .top-border {
+    display: block; 
+}
+header nav ul li.nav_pages .Dropdowns{
+    margin-left: 26.5%;
+}
+header nav ul li.nav_pages:hover .dropdown-content{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/*------------ style for Links and button placed right side------------*/
 header .seller{
     margin-left: 18%;
     box-sizing: border-box;
-    width: 25%;
+    width: 22%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    overflow: hidden;
+    justify-content: space-between;
+    border: none;
 
 }
 header .seller button{
@@ -77,28 +297,37 @@ header .seller button{
 }
 header .seller button a{
     display: inline-block;
-    font-size: 1.1em;
-    color: #222222;
     text-decoration: none;  
     transition: 0.5s;
-    font-size: 15px;
-    font-weight: 550;
+    font-size: 13px;
+    color: #222222;
+    font-weight: 500;
 }
-/* header .seller button.signUp:hover, header .seller button.signUp a{
-    color: #fff;
-} */
-
-header .seller button.signUp{
-    border: 2px solid currentColor;
-    width: 8em;
-    padding: 10px;
-    border-radius: 7px;
+header .seller button a:hover{
+    color: #5BBB7B;
 }
 
-header .seller button.signUp:hover{
+header .seller .signUp{
+    border: 1px solid #222222;
+    width: 5em;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+}
+
+header .seller .signUp:hover{
     background-color: #5BBB7B;
     border: none;
+    color: #fff;
 }
+
+
+
+
+
+
 
 /* -----------------------------------------------------section1----------------------------------------- */
 .section1{
@@ -111,37 +340,39 @@ header .seller button.signUp:hover{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.section1 .center-image{
+.section1 .text_in_image{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     overflow: hidden;
     box-sizing: border-box;
     width: 45%;
     line-height: 1;
 }
-.section1 .center-image h2{
+.section1 .text_in_image h2{
     color: #fff;
-    font-size: 55px;
+    font-size: 45px;
     text-align-last: center;
+    font-family: "Alata";
+    line-height: 1.25;
 }
-.section1 .center-image p{
+.section1 .text_in_image p{
     color: #fff;
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     padding-top: 20px;
 }
 
 /* -----  buttons ------- */
-.section1 .center-image .find{
+.section1 .text_in_image .find{
     margin-left: 25%;
     display: flex;
     align-items: center;
     text-align: center;
     padding-top: 25px;
 }
-.center-image .find div{
+.text_in_image .find a{
     margin-left: 15px;
     width: 20%;
     padding: 15px;
@@ -150,19 +381,18 @@ header .seller button.signUp:hover{
     background-color: #fff;
     transition: 0.6s;
 }
-.center-image .find div:hover{
+.text_in_image .find a:hover{
     background-color: #5BBB7B;
+    color: #fff;
 }
-.center-image .find div a{
+.text_in_image .find  a{
     text-align: center;
     text-decoration: none;
     color: #222222;
     font-weight: 500px;  
 }
-.center-image .find div a:hover{
-    color: #fff;
-}
-.center-image .find .talent{
+
+.text_in_image .find .talent{
     margin-left: 15px;
     width: 20%;
     padding: 15px;
@@ -170,15 +400,14 @@ header .seller button.signUp:hover{
     border-radius: 5px;
     background-color: #222222;
     transition: 0.6s;
+    color: #fff;
 
 }
-.center-image .find .talent:hover{
-    background-color: #5BBB7B;
-}
-.center-image .find .talent a{
+.text_in_image .find .talent:hover{
+    background-color: #1F4B3F;
     color: #fff;
-   
 }
+
 
 
 
