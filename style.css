@@ -53,12 +53,13 @@ header nav ul{
 
 header nav ul li{
     padding: 0 10px;  
+    position: relative;
 }
 
 
 header nav  ul  li > a{
     display: inline-block;
-    font-size: 16px;
+    font-size: 13px;
     color: #222222;
     font-weight: 500;
     text-decoration: none; 
@@ -71,7 +72,9 @@ nav ul li a i{
     font-size: 6px;
     padding: 0 5px;
 }
-header nav  ul  li a:hover:not(ol li a){color: #5BBB7B;}
+header nav  ul  li a:hover:not(.Dropdown-menue ul li a){
+    color: #5BBB7B;
+}
 
 header nav ul .navigations > a{
     position: relative;
@@ -81,199 +84,66 @@ header nav ul .navigations > a{
     border: 1px solid red;
 }
 
-/* div element appears the top of navigations */
-header nav ul li.navigations .top-border{
-    display: none;
-    background-color: #5BBB7B;
+
+nav > ul > li > a::before{
+    content: "";
     position: absolute;
-    top: 0;
-    animation-name: top_border;
-    animation-duration: 0.4s;  
-    animation-fill-mode: forwards;
-    width: 2%;
+    display: block;
+    width: 0%;
     height: 0.6vh;
+    background-color: #5BBB7B;
+    top: 0;
+    transition: all ease-in-out 0.3s;
 }
-@keyframes top_border{
-    from{width: 1%;}
-    to{width: 100%;}
-}
-
-
-/* ----When the navigation of (Home) is placed over the mouse---- */
-header nav ul li.nav_home:hover .top-border {
-    display: block; 
-
-}
-header nav ul li.nav_home:hover .dropdown-content {
-    display: block; 
-}
-header nav ul li.nav_home .Dropdowns{
-    position: absolute;
-    top: 5em;
-    left: 20em;
+nav ul li a:hover::before{
+    width: 100%;
 }
 
     /* -------------Dropdowns------------- */
-    .Dropdowns {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 5em;
-        left: 18.7em;
-        height: auto;
-        transition: .5s ease;;
-    }
-
-    .Dropdowns .dropdown-content{
-    display: none;
-    z-index: 100;
+.Dropdown-menue{
+    display: flex;
+    position: absolute;
+    top: 10%0;
+    left:  10px;
     background-color: #fff;
-    width: 180px;
-    line-height: 2.5;
-    height: auto;
-    box-sizing: border-box;
-    border-radius: 3px;
-    border-top: 1.3px solid #E9E9E9;  
-    /* animation-name: dropdown-content;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards; */
-    }
-    /* @keyframes dropdown-content{
-        from{height: 0;}
-        to{height: 202px;}
-    } */
-    .dropdown-content ol{
-        list-style-type: none;
-    }
-    .dropdown-content ol li{
-        padding-left: 25px;
-    }
-    .dropdown-content ol li a{
-        font-size: 15px;
-    }
-
-    .dropdown-content ol li.active{
-        background-color: #F0EFEC;
-        border-left: 2px solid #5BBB7B;
-
-    }
-    .dropdown-content ol li:hover:not(.active){
-        background-color: #F0EFEC;
-        border-left: 2px solid #5BBB7B;
-
-    }
-    .home6_10{
-        margin-left: -1%;
-        z-index: 100;
-    }
-
-
-/* ----When the navigation of (browse Jop) is placed over the mouse---- */
-header nav ul li.nav-browseJop:hover .top-border {
-    display: block; 
-}
-header nav ul li.nav-browseJop .Dropdowns{
-    margin-left: 6em;
-}
-header nav ul li.nav-browseJop:hover .dropdown-content{
-    display: block;
-}
-    /* -----------------------The Dropdowns in navigation of (browse Jop) ------------ */
-    .lists_in_nav-browseJop{
-        position: relative;
-    }
-    .lists_in_nav-browseJop i{
-        font-size: 6px;
-        padding-left: 80px;
-    }
-    .list_project i{
-        padding-left: 82px;
-    }
-    .list_jops i{
-        padding-left: 96px;
-    }
-        /* dropdown in service, project and jops */
-        .lists_in_nav-browseJop .Dropdowns{
-            display: none;
-            position: absolute;
-            top: -1px;
-            left: 5em;
-            box-shadow: 2px 2px 3px #464542;
-        }
+    border-top: 1px solid #222222;
+    z-index: 3;
     
-        /* When the Link of (Service) is placed over the mouse*/
-        .list_services:hover .Dropdowns{
-            display: block;
-        } 
-         /* When the Link of (project) is placed over the mouse*/
-        .list_project:hover .Dropdowns{
-            display: block;
-        } 
-        /* When the Link of (Jops) is placed over the mouse*/
-        .list_jops:hover .Dropdowns{
-            display: block;
-        } 
-        
-/* ----When the navigation of (Users) is placed over the mouse---- */
-header nav ul li.nav_users:hover .top-border {
-    display: block; 
+}
 
-}
-header nav ul li.nav_users .Dropdowns{
-    margin-left: 15.8%;
-}
-header nav ul li.nav_users:hover .dropdown-content{
+.Dropdown-menue ul{
     display: block;
+    
 }
-    /* -----------------------The Dropdowns in navigation of (Users) ------------ */
-
-    .lists_in_nav-users{
-        position: relative;
-    }
-    .lists_in_nav-users i{
-        font-size: 6px;
-        padding-left: 55px;
-    }
-    .lists_in_nav-users .Dropdowns{
-        display: none;
-        position: absolute;
-        top: -1px;
-        left: 9.3em;
-        box-shadow: 2px 2px 3px #464542;
-    }
-
-    /* When the Link of (freelancers) is placed over the mouse*/
-    .list_freelancers:hover .Dropdowns{
-        display: block;
-    }
-    /* When the Link of (employers) is placed over the mouse*/
-    .list_employers:hover .Dropdowns{
-        display: block;
-    }
-
-
-
-/* ----When the navigation of (Blog) is placed over the mouse---- */
-header nav ul li.nav_blog:hover .top-border {
-    display: block; 
+.Dropdown-menue ul li{
+    padding: 10px;
+    width: 160px;
+    height: 0;
+    
+    display: none;
+    transition: width 1s, height 0.5s;
+    
 }
-header nav ul li.nav_blog .Dropdowns{
-    margin-left: 21.4%;
+.Dropdown-menue ul li a{
+    padding-left: 10px;
+    
 }
-header nav ul li.nav_blog:hover .dropdown-content{
+.Dropdown-menue ul li:hover:not(.active){
+    background-color: #F0EFEC;
+    border-left: 2px solid #5BBB7B;
+}
+.Dropdown-menue ul .active{
+    background-color: #F0EFEC;
+    border-left: 2px solid #5BBB7B;
+}
+
+.nav_home:hover .Dropdown-menue ul li{
     display: block;
+    height: auto;
 }
 
-/* ----When the navigation of (Pages) is placed over the mouse---- */
-header nav ul li.nav_pages:hover .top-border {
-    display: block; 
-}
-header nav ul li.nav_pages .Dropdowns{
-    margin-left: 26.5%;
-}
-header nav ul li.nav_pages:hover .dropdown-content{
-    display: block;
-}
+
+
 
 
 
@@ -352,6 +222,7 @@ header .seller .signUp:hover{
     box-sizing: border-box;
     width: 45%;
     line-height: 1;
+    transition: all ease-in-out 1s;
 }
 .section1 .text_in_image h2{
     color: #fff;
@@ -417,9 +288,9 @@ header .seller .signUp:hover{
 
 .section-2{
     margin-top: 7%;
-    width: 80%;
+    width: 88%;
     border: 1px solid red;
-    height: 100vh;
+    height: 82vh;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -435,107 +306,367 @@ header .seller .signUp:hover{
     line-height: 2;
 
 }
-.section-2 .view_more span{
-    opacity: 0.6;
-    
-}
-.section-2 .view_more a{
-    text-decoration: none;
-    font-size: 17px;
-    display: flex;
-    align-items: center; 
-    color: #222222;
-}
-.section-2 .view_more a i{
-    padding-left: 5px;
-}
+    .view_more span{
+        opacity: 0.5;
+        
+    }
+    .view_more a{
+        text-decoration: none;
+        font-size: 15px;
+        display: flex;
+        align-items: center; 
+        color: #222222;
+        transition: 0.3s;
+    }
 
-/* image Services */
+    .view_more a i{
+        padding-left: 5px;
+        font-size: 15px;
+    }
+    .view_more a:hover{
+        color: #5BBB7B;
+    }
+
+/* ---------------image Services----------------------- */
 .section-2 .image-service{
     margin-top: 5%;
     width: 100%;
     border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: visible;
+    height: auto;
 }
+.image-service .boxes{
+
+    display: flex;
+    align-items: center;
+    
+}
+/* Image wrapper */
 .image-service .image-wrapper{
-    width: 300px;
+    width: 285px;
     height: 60vh;
     border: 1px solid #F2F2F2;
     border-radius: 10px;
     box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+    margin-right: 14px;
 }
-.image-service .image-wrapper img{
+.image-service .image-wrapper .love-icon i{
+    position: absolute;
+    z-index: 200;
+    background-color: #fff;
+    top: 1.5em;
+    right: 1em;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid #8B9094;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.image-service .image-wrapper .love-icon i:hover{
+    background-color: #5BBB7B;
+    border: none;
+    color: #fff;
+}
+.image-wrapper img{
     width: 100%;
     height: auto;
 }
+.image-wrapper .love-icon i{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 3em;
+    background-color: #fff;
+
+}
+.image-wrapper:hover{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.image-wrapper:hover  .service-title a{
+    text-decoration: underline;
+    color: #89CEA0;
+    
+}
+
+
 
 /* Image service Content */
 .image-service .image-wrapper .image-service_contant{
     border: none;
-    width: 93%;
+    width: 86%;
     margin: auto;
-    line-height: 2.5;
+    line-height: 3;
+    font-size: 15px !important;
+    
 }
 
 /* Category services */
-.image-service .image-wrapper .categort-service{}
-.image-service .image-wrapper .categort-service a{
+.image-service_contant .categort-service a{
     font-size: 15px;
     color: #515151;
     text-decoration: none;
     opacity: 0.7;
+    transition: 0.3s;
 }
-.image-service .image-wrapper .categort-service a:hover{
+.image-service_contant .categort-service a:hover{
     color: #515151;
     opacity: 1;
 }
 
 /* Service title */
-.image-service .image-wrapper .service-title{
+.image-service_contant .service-title{
     line-height: 1.25; 
 }
-.image-service .image-wrapper .service-title a{
+.image-service_contant .service-title a{
     text-decoration: none;
     color: #000000;
+    transition: 0.5s;
     
 }
-.image-service .image-wrapper .service-title a:hover{
+.image-service_contant .service-title a:hover{
     text-decoration: underline;
     color: #89CEA0;
 }
 /* rating review */
-.image-service .image-wrapper .rating-raview{
+.image-service_contant  .rating-raview{
     padding-left: 0 15px;
 }
-.image-service .image-wrapper .rating-raview i{
+.image-service_contant  .rating-raview i{
     color: #E1C03F;
     font-size: 11px;
 }
-.image-service .image-wrapper .rating-raview span.rate-txt{
+.image-service_contant  .rating-raview span.rate-txt{
     opacity: 0.6;
     font-size: 13px;
     /* padding-left: 5px; */
 }
 
 /* personal detail */
-.image-service .image-wrapper .personal-deatil{
+.image-service_contant  .personal-deatil{
     display: flex;
     align-items: center;
 }
-.image-service .image-wrapper .personal-deatil img{
+.image-service_contant  .personal-deatil img{
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
-.image-service .image-wrapper .personal-deatil .name{
+.image-service_contant  .personal-deatil .name a{
     font-size: 12px;
-    padding: 8px;
+    padding: 3px;
+    text-decoration: none;
+    color: #222222;
+    transition: 0.3s;
 }
-.image-service .image-wrapper .personal-deatil .starting-mony{
+.image-service_contant  .personal-deatil .name a:hover{
+    color: #5BBB7B;
+}
+.image-service_contant  .personal-deatil .starting-mony{
     font-size: 12px;
-    padding-left: 50px;
+    padding-left: 25px;
 }
 /* --------------------------------------------------------section-3--------------------------------------------- */
+.Section3{
+    height: 52vh;
+}
+.image-service .boxes .categories {
+    width: 150px;
+    height: 30vh;
+    border: 1px solid #C9C9CA;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    margin-right: 23px;
+}
+.image-service .boxes .categories:hover{
+    border-color: #222222;
+}
+.categories .categories_content{
+    position: absolute;
+    left: 1em;
+    
+    line-height: 2.8;
+}
+.categories .categories_content i{
+    position: relative;
+    font-size: 30px;
+    color: #222222;
+}
+.categories .categories_content i::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 5px;
+    z-index: -1;
+    background-color: #FBF7ED;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50%;
+}
+
+.categories .categories_content h5{
+    padding-top: 8px;
+    font-size: 10px;
+    color: #878787;
+    font-family: "DM sans" !important;
+    
+}
+.categories .categories_content p{
+    font-size: 17px;
+    line-height: 1.25;
+    color: #3D3D3D;
+}
+
+/* ------------------------------------------------<!-- Section4 -->------------------------------------------ */
+.section4{
+    width: 100%;
+    background-color: #F0EFEC;
+    height: 120vh;
+    border-radius: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 6%;
+    border-radius: 5px;
+}
+
+.section4 .section-2{
+    margin-top: 5em;
+    width: 88%;
+    overflow: visible;
+}
+
+.lastest-projects{
+    display: flex;
+    align-items: center;
+    
+}
+
+.lastest-projects .projects{
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 55%;
+    height: 27vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: 23px;
+    
+}
+.lastest-projects .project-3{
+    margin-right: 5px;
+}
+ .projects .image{
+    width: 17%;
+    height: 29vh;
+    border: none;
+}
+.projects .image img{
+    margin-top: 18px;
+    width: 55px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.lastest-projects .projects .content{
+    margin-left: 23px;
+    width: 73%;
+    height: 23vh;
+    border: none;
+    line-height: 2;
+    overflow: visible;
+    position: relative;
+}
+.lastest-projects .projects .content .love-icon i{
+    position: absolute;
+    z-index: 500;
+    top: 0.5em;
+    right: 0.1em;
+    background-color: #fff;
+    font-size: 1em;
+    border-radius: 50%;
+    padding: 7px;
+    border: 1px solid #C9C9CA;
+    transition: all ease-in-out 0.3s;
+}
+.lastest-projects .projects .content .love-icon i:hover{
+    background-color: #5BBB7B;
+    border: none;
+    color: #fff;
+
+}
+.projects .content h2{
+    line-height: 1;
+}
+.projects .content h2 a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #222222;  
+}
+.projects .content h3 a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #5BBB7B;  
+}
+
+/* location */
+.projects .content .inner-information .location{
+    display: flex;
+    align-items: center;
+}
+.projects .content .inner-information .location i, .projects .content .inner-information .location span{
+    font-size: 13px;
+    opacity: 0.5;
+    padding-right: 10px;
+}
+.projects .content .inner-information .location span{
+    border-right: 1px solid rgba(0.98, 0.97, 0.93, 0.5);    
+}
+/* months */
+.projects .content .inner-information .months{
+    display: flex;
+    align-items: center;
+}
+.projects .content .inner-information .months i, .projects .content .inner-information .months span{
+    font-size: 13px;
+    opacity: 0.5;
+    padding-right: 10px;
+}
+.projects .content .inner-information .months span{
+    border-right: 1px solid rgba(0.98, 0.97, 0.93, 0.5);    
+}
+/* Proposals */
+.projects .content .inner-information .Proposals{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.projects .content .inner-information .Proposals i, .projects .content .inner-information .Proposals span{
+    font-size: 13px;
+    opacity: 0.5;
+    padding-right: 10px;
+}
+.months_prppossals{
+    display: flex;
+    align-items: center;
+    
+}
+/* project 2 */
+.location_months{
+    display: flex;
+    align-items: center;
+    
+}
+.location_months .months{
+    padding-left: 15px;
+}
+
 
 
 
