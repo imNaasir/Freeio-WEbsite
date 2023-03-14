@@ -678,10 +678,11 @@ header .seller .signUp:hover{
 /* --------------------------------------------------------section 5------------------------------------------------------------ */
 
 .section5 .section-2{
-    height: 120vh;
+    height: 83vh;
 }
 .section5  .image-wrapper{
     text-align: center;
+    background-color: #fff;
 }
 
 .section5  .image-wrapper a img{
@@ -708,12 +709,13 @@ header .seller .signUp:hover{
 .section5 .image-service_contant .tags a{
     text-decoration: none;
     background-color: #FBF7ED;
-    margin-right: 8px;
-    font-size: 10px;
+    margin-right: 5px;
+    font-size: 11px;
     color: #222;
-    width: 30%;
+    width: 33%;
     border-radius: 40px;
     transition: all ease-in-out 0.3s;
+    font-weight: 500;
 }
 .section5 .image-service_contant .tags a:hover{
     background-color: #222;
@@ -731,14 +733,144 @@ header .seller .signUp:hover{
 
 }
 .section5 .image-service_contant .location-rate .location{
-    margin-right: 60px;
+    
+    font-size: 13px;
 }
 .section5 .image-service_contant .location-rate .rate{
     text-align: left;
+    font-size: 13px;
+    margin-left: 80px;
 }
 .section5 .image-service_contant .location-rate .location, .section5 .image-service_contant .location-rate .rate{
     line-height: 2;
 }
+
+.section5 .image-service_contant .view--profail a{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  100%;
+    border: 2px solid;
+    border-radius: 8px;
+    font-size: 13px;
+    background: none;
+}
+.section5 .image-service_contant .view--profail a i{
+    padding-left: 10px;
+}
+
+
+
+/* -----------------------------------------------------section 6---------------------------------------------------------------- */
+
+.sectin6{
+    margin-top: 8%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid blue;
+    
+}
+.sectin6 .flraalancer_talent{
+    background-color: #FFEDE9;
+    width: 83%;
+    height: 100vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+}
+.sectin6 .flraalancer_talent .freelacer_talent_taxt{
+    width: 36%;
+    position: absolute;
+    top: 8em;
+    left: 6em;
+    border: none;
+    overflow: visible;
+    line-height: 2;
+}
+.sectin6 .flraalancer_talent .freelacer_talent_taxt h2{
+    margin-bottom: 35px;
+    line-height: normal;
+}
+.sectin6 .flraalancer_talent .freelacer_talent_taxt .freelacer_talent_fingertips{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: none;
+    height: 13vh;
+    line-height: 1;
+   
+}
+/* .sectin6 .flraalancer_talent .freelacer_talent_taxt .freelacer_talent_fingertips h4{line-height: normal;} */
+.sectin6 .flraalancer_talent .freelacer_talent_taxt .freelacer_talent_fingertips .icon{
+    width: 11%;
+    border: none;
+    height: 10vh;
+    margin-top: 5px;
+    
+}
+.sectin6 .flraalancer_talent .freelacer_talent_taxt .freelacer_talent_fingertips .icon i{
+    font-size: 30px;
+    color: #222;
+    opacity: 0.7;
+    text-align: left;
+    
+}
+.sectin6 .flraalancer_talent .freelacer_talent_taxt .freelacer_talent_fingertips .info{
+    line-height: 1.8;
+    
+}
+.sectin6 .flraalancer_talent .freelacer_talent_taxt .freelacer_talent_fingertips .info p{
+    opacity: 0.7;
+    font-size: 13px;
+}
+
+.sectin6  .right_img{
+    margin-top: 4%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sectin6  .right_img img{
+    height: 85vh;
+    border-radius: 20px;
+}
+
+.sectin6 .info_on_picture{
+    background-color: #222222;
+    width: 25%;
+    height: 35vh;
+    position: absolute;
+    top: 14em;
+    right: 21em;
+    line-height: 1;
+    border-radius: 20px;
+}
+.sectin6 .info_on_picture .flex{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 2em 0  0 3em;
+    
+}
+.sectin6 .info_on_picture .flex i{
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
