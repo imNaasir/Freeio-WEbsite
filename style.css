@@ -384,7 +384,9 @@ header .seller .signUp:hover{
     background-color: #fff;
 
 }
-.image-wrapper:hover{
+
+
+.image-wrapper:not(.section5  .image-wrapper){
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
 }
 .image-wrapper:hover  .service-title a{
@@ -402,6 +404,8 @@ header .seller .signUp:hover{
     margin: auto;
     line-height: 3;
     font-size: 15px !important;
+    box-sizing: border-box;
+    overflow: hidden;
     
 }
 
@@ -539,6 +543,7 @@ header .seller .signUp:hover{
     margin-top: 5em;
     width: 88%;
     overflow: visible;
+    height: 100vh;
 }
 
 .lastest-projects{
@@ -557,7 +562,11 @@ header .seller .signUp:hover{
     box-sizing: border-box;
     overflow: hidden;
     margin-right: 23px;
+    flex-wrap: wrap;
     
+}
+.flex-rab{
+    display: flex;
 }
 .lastest-projects .project-3{
     margin-right: 5px;
@@ -605,7 +614,7 @@ header .seller .signUp:hover{
     line-height: 1;
 }
 .projects .content h2 a{
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
     color: #222222;  
 }
@@ -666,7 +675,82 @@ header .seller .signUp:hover{
 .location_months .months{
     padding-left: 15px;
 }
+/* --------------------------------------------------------section 5------------------------------------------------------------ */
 
+.section5 .section-2{
+    height: 120vh;
+}
+.section5  .image-wrapper{
+    text-align: center;
+}
+
+.section5  .image-wrapper a img{
+    margin-top: 7%;
+    width: 30%;
+    height: auto;
+    border-radius: 100%;
+}
+.section5  .image-service_contant  .categort-service a{
+    color: #222222;
+    opacity: 2.0;
+}
+.section5  .image-service_contant  .categort-service a:hover{
+    color: #5BBB7B;
+}
+.section5 .image-service_contant .service-title {
+    opacity: 0.5;
+}
+.section5 .image-service_contant .tags{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.section5 .image-service_contant .tags a{
+    text-decoration: none;
+    background-color: #FBF7ED;
+    margin-right: 8px;
+    font-size: 10px;
+    color: #222;
+    width: 30%;
+    border-radius: 40px;
+    transition: all ease-in-out 0.3s;
+}
+.section5 .image-service_contant .tags a:hover{
+    background-color: #222;
+    color: #fff;
+}
+
+.section5 .image-service_contant .tags a.tag2{
+    width: 45%;
+}
+.section5 .image-service_contant .location-rate{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    
+
+}
+.section5 .image-service_contant .location-rate .location{
+    margin-right: 60px;
+}
+.section5 .image-service_contant .location-rate .rate{
+    text-align: left;
+}
+.section5 .image-service_contant .location-rate .location, .section5 .image-service_contant .location-rate .rate{
+    line-height: 2;
+}
+
+
+
+/* -----------------------------------
+-----------------------------------
+-----------------------------------
+----------------------------------- */
+
+
+
+
+/* ------------------------------------------------------------------section6------------------------------------------- */
 
 
 
