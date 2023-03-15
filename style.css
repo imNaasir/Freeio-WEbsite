@@ -1045,16 +1045,24 @@ h2{
 
 /* ----------------------------------------section 10------------------------------------------- */
 .section10{
-    margin-top: 10%;
+    margin-top: 8em;
+    /* border: 2px solid darkblue; */
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+.bg-in-section10{
+    margin-top: 9.7%;
     background-color: #FFE9DC;
     width: 100%;
-    height: 70vh;
-    box-sizing: border-box;
+    height: 56.5vh;
     overflow: visible;
     position: relative;
 }
 .section10 .talent-in-bussiness{
-    border: 1px solid blue;
+    border: none;
     width: 32%;
     height: 30vh;
     text-align: left;
@@ -1071,10 +1079,33 @@ h2{
     text-align: justify;
 }
 .section10 .talent-in-bussiness p{
-    padding-top: 20px;
+    padding-top: 30px;
     line-height: 1;
     text-align: left;
     font-size: 12px;
+}
+.section10 .talent-in-bussiness .get-sarted a{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:  35%;
+    border: 2px solid;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #222222;
+    transition: all ease-in-out 0.3s;
+}
+.section10 .talent-in-bussiness .get-sarted a:hover{
+    background-color: #1F4B3F;
+    
+    
+}
+.section10 .talent-in-bussiness .get-sarted a i{
+    padding-left: 10px;
 }
 
 .section10 .image{
@@ -1083,6 +1114,62 @@ h2{
     right: 0;
     top: 0;
 }
+.section10 .image img{
+    height: 500px;
+}
+
+/* --------------------------------------section 11------------------------------------------------- */
+.section11{
+    width: 90%;
+    margin: auto;
+ 
+}
+.section11 p{
+    margin-top: 3%;
+    font-size: 13px;
+    text-align: center;
+}
+.section11 .factories{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.section11 .factories img{
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out 0s;
+    opacity: 0.7;  
+    width: 75px;
+}
+
+.section11 .factories img:hover{
+    opacity: 1;
+}
+
+.section11 .factories .cisco  img{
+    width: 60px;
+}
+.section11 .factories .dropcam  img{
+    width: 90px;
+}
+
+/* -------------------------------------------------footer----------------------------------------------- */
+footer{
+    margin-top: 5em;
+    background-color: #222222;
+    width: 100%;
+    height: 150vh;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+
 
 
 
