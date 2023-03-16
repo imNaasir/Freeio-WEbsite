@@ -1165,6 +1165,152 @@ footer{
     border-top-left-radius: 20px;
     box-sizing: border-box;
     overflow: hidden;
+    padding: 0 20px;
+}
+footer .top_footer{
+    
+    
+    width: 100%;
+    /* height: 20vh; */
+    border: 1px solid red;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .top_footer ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+footer .top_footer ul li{
+    padding: 15px 0;
+    font-size: 20px;
+    margin-right: 22px;
+    font-weight: 500;
+    
+}
+footer .top_footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+footer .top_footer .follow_us{
+    display: flex;
+    align-items: center;
+}
+footer .top_footer .follow_us h2{
+    color: #fff;
+    margin-right: 30px;
+    font-size: 20px;
+}
+footer .top_footer .follow_us .social_madea{
+    display: flex;
+    align-items: center;
+}
+footer .top_footer .follow_us .social_madea a i{
+    font-size: 25px;
+    color: #fff;
+    margin-right: 30px;
+}
+footer .top_footer .follow_us .social_madea a.none-margin i{
+    margin-right: 0px;
+}
+
+footer .top_footer .horizantal-line{
+    background-color: #2f2f2f;
+    width: 100%;
+    height: 2vh;
+}
+
+
+footer .content-in-footer{
+    margin-top: 4em;
+    /* border: 1px solid blue; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70vh;
+    display: flex;
+  
+   
+}
+footer .content-in-footer h3{
+    font-size: 17px;
+    color: #fff;
+}
+footer .content-in-footer ul{
+    padding-top: 20px;
+    list-style: none;
+    line-height: 2.5;
+}
+footer .content-in-footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.7;
+    transition: all ease-in-out 0.3;
+}
+footer .content-in-footer ul li a:hover{
+    opacity: 2;
+}
+footer .content-in-footer .Categories{
+    margin-left: 11em;
+}
+footer .content-in-footer .Support{
+    margin-left: 11em;
+}
+footer .content-in-footer .subscribe{
+    margin-left: 12em;
+}
+footer .content-in-footer .subscribe .input_email{
+    position: relative;
+}
+footer .content-in-footer .subscribe .input_email input{
+    width: 141%;
+    background-color: #363636;
+    border: none;
+    outline: none;
+    padding: 20px 0px;
+    border-radius: 10px;
+    color: #fff;
+    padding-left: 23px;
+    font-size: 17px;
+    font-weight: 500;
+}
+::placeholder{
+    font-size: 17px;
+    color: #acac99;
+    font-weight: 500;
+}
+footer .content-in-footer .subscribe .input_email .send{
+    position: absolute;
+    z-index: 100;
+    right: -80px;
+    top: 10px;
+}
+footer .content-in-footer .subscribe .input_email .send{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+footer .content-in-footer .subscribe .input_email .send:hover{
+    color: #5BBB7B;
+}
+footer .content-in-footer .subscribe li h3{
+    padding-top: 25px;
+}
+footer .content-in-footer .subscribe li.apple, footer .content-in-footer .subscribe li.Android{
+    display: flex;
+    align-items: center;
+}
+footer .content-in-footer .subscribe li.Android i, footer .content-in-footer .subscribe li.apple i{
+    margin-right: 5px;
+    font-size: 16px;
 }
 
 
