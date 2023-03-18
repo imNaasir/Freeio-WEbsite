@@ -106,9 +106,11 @@ nav ul li a:hover::before{
     top: 10%0;
     left:  10px;
     background-color: #fff;
-    border-top: 1px solid #222222;
+    border-top: 1px solid #F0EFEC;
+    border-radius: 5px;
     z-index: 3;
-    
+    transition-property: width;
+    transition-duration: 5s;
 }
 
 .Dropdown-menue ul{
@@ -117,11 +119,13 @@ nav ul li a:hover::before{
 }
 .Dropdown-menue ul li{
     padding: 10px;
-    width: 160px;
+    width: 0px;
     height: 0;
     
     display: none;
-    transition: width 1s, height 0.5s;
+    transition-property: width;
+    transition-duration: 2s;
+    
     
 }
 .Dropdown-menue ul li a{
@@ -139,6 +143,73 @@ nav ul li a:hover::before{
 
 .nav_home:hover .Dropdown-menue ul li{
     display: block;
+    height: auto;
+    width: 160px;
+    height: auto;
+    position: relative;
+}
+
+/* Dropdown in navigation (Browser Jop) */
+.browseJops:hover .Dropdown-menue ul li{
+    display: block;
+    width: 160px;
+    height: auto;
+}
+.browseJops .Dropdown-menue ul li i{
+    padding-left: 80px;
+}
+.browseJops .Dropdown-menue ul li .jops i{
+    padding-left: 100px;
+}
+    /* Services */
+    .browseJops .Dropdown-menue ul li.services .Dropdown-menue{
+        display: none;
+        position: absolute;
+        left: 11em;
+        top: 0;
+    }
+    .browseJops .Dropdown-menue ul li.services:hover .Dropdown-menue{
+        display: block;
+    }
+    /* Projects */
+    .browseJops .Dropdown-menue ul li.projects{position: relative;}
+    .browseJops .Dropdown-menue ul li.projects .Dropdown-menue{
+        display: none;
+        position: absolute;
+        left: 11em;
+        top: 0;
+    }
+    .browseJops .Dropdown-menue ul li.projects:hover .Dropdown-menue{
+        display: block;
+    }
+
+/* Dropdown in navigation (Users) */
+.users:hover .Dropdown-menue ul li{
+    display: block;
+    width: 160px;
+    height: auto;
+}
+.users .Dropdown-menue ul li i{
+    padding-left: 60px;
+}
+.users .Dropdown-menue ul li .emp i{
+    padding-left: 68px;
+}
+.users:hover .Dropdown-menue ul li.projects {
+    position: relative;
+}
+
+
+/* Dropdown in navigation (Blogs) */
+.blogs:hover .Dropdown-menue ul li{
+    display: block;
+    width: 160px;
+    height: auto;
+}
+/* Dropdown in navigation (Pages) */
+.pages:hover .Dropdown-menue ul li{
+    display: block;
+    width: 160px;
     height: auto;
 }
 
@@ -288,12 +359,12 @@ header .seller .signUp:hover{
 
 .section-2{
     margin-top: 7%;
-    width: 88%;
-    border: 1px solid red;
+    width: 90%;
+    /* border: 1px solid red; */
     height: 82vh;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
+    overflow: visible;
     box-sizing: border-box;
 }
 .section-2 h2{
@@ -331,7 +402,7 @@ header .seller .signUp:hover{
 .section-2 .image-service{
     margin-top: 5%;
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -347,13 +418,18 @@ header .seller .signUp:hover{
 /* Image wrapper */
 .image-service .image-wrapper{
     width: 285px;
-    height: 60vh;
+    height: 65vh;
     border: 1px solid #F2F2F2;
     border-radius: 10px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
     margin-right: 14px;
+    
+}
+.image-service .image-wrapper:hover{
+    box-shadow: 0px 6px 15px 0px rgba(55, 67, 88, 0.09);
+
 }
 .image-service .image-wrapper .love-icon i{
     position: absolute;
@@ -386,9 +462,9 @@ header .seller .signUp:hover{
 }
 
 
-.image-wrapper:not(.section5  .image-wrapper){
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
-}
+/* .image-wrapper:not(.section5  .image-wrapper){
+    box-shadow: 0 2px 2px 0 rgba(54, 53, 53, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+} */
 .image-wrapper:hover  .service-title a{
     text-decoration: underline;
     color: #89CEA0;
@@ -452,6 +528,7 @@ header .seller .signUp:hover{
 
 /* personal detail */
 .image-service_contant  .personal-deatil{
+    margin-top: 8px;
     display: flex;
     align-items: center;
 }
@@ -478,6 +555,10 @@ header .seller .signUp:hover{
 .Section3{
     height: 52vh;
 }
+.section-2 h2{
+    text-align: left !important;
+}
+
 .image-service .boxes .categories {
     width: 150px;
     height: 30vh;
@@ -531,7 +612,7 @@ header .seller .signUp:hover{
 .section4{
     width: 100%;
     background-color: #F0EFEC;
-    height: 120vh;
+    height: 115vh;
     border-radius: 40px;
     box-sizing: border-box;
     overflow: hidden;
@@ -544,11 +625,16 @@ header .seller .signUp:hover{
     width: 88%;
     overflow: visible;
     height: 100vh;
+    /* border: 1px solid blue; */
+}
+.section4 .section-2 h2{
+    text-align: left !important;
 }
 
 .lastest-projects{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     
 }
 
@@ -557,11 +643,11 @@ header .seller .signUp:hover{
     display: flex;
     align-items: center;
     background-color: #fff;
-    width: 55%;
-    height: 27vh;
+    width: 31%;
+    height: 30vh;
     box-sizing: border-box;
     overflow: hidden;
-    margin-right: 23px;
+    margin-right: 35px;
     flex-wrap: wrap;
     
 }
@@ -570,6 +656,9 @@ header .seller .signUp:hover{
 }
 .lastest-projects .project-3{
     margin-right: 5px;
+}
+.lastest-projects .project-6{
+    margin-right: 16px;
 }
  .projects .image{
     width: 17%;
@@ -587,10 +676,11 @@ header .seller .signUp:hover{
     margin-left: 23px;
     width: 73%;
     height: 23vh;
-    border: none;
+    /* border: 1px solid red; */
     line-height: 2;
     overflow: visible;
     position: relative;
+    /* text-align: left !important; */
 }
 .lastest-projects .projects .content .love-icon i{
     position: absolute;
@@ -612,17 +702,25 @@ header .seller .signUp:hover{
 }
 .projects .content h2{
     line-height: 1;
+    text-align: left !important;
 }
 .projects .content h2 a{
     font-size: 13px;
     text-decoration: none;
     color: #222222;  
+    text-align: left !important;
+    transition: 0.5s;
+}
+.projects .content h2 a:hover{
+    color: #5BBB7B; 
+
 }
 .projects .content h3 a{
     font-size: 15px;
     text-decoration: none;
     color: #5BBB7B;  
 }
+
 
 /* location */
 .projects .content .inner-information .location{
@@ -633,9 +731,13 @@ header .seller .signUp:hover{
     font-size: 13px;
     opacity: 0.5;
     padding-right: 10px;
+    text-align: left;
+    
+
 }
 .projects .content .inner-information .location span{
-    border-right: 1px solid rgba(0.98, 0.97, 0.93, 0.5);    
+    border-right: 1px solid rgba(0.98, 0.97, 0.93, 0.5); 
+    
 }
 /* months */
 .projects .content .inner-information .months{
@@ -680,9 +782,13 @@ header .seller .signUp:hover{
 .section5 .section-2{
     height: 83vh;
 }
+.section5 .section-2 h2{
+    text-align: left !important;
+}
 .section5  .image-wrapper{
     text-align: center;
     background-color: #fff;
+    height: 65vh;
 }
 /* ---------------- */
 .section5  .image-wrapper:hover{
@@ -697,7 +803,7 @@ header .seller .signUp:hover{
 
 
 .section5  .image-wrapper a img{
-    margin-top: 7%;
+    margin-top: 8%;
     width: 30%;
     height: auto;
     border-radius: 100%;
@@ -780,7 +886,7 @@ header .seller .signUp:hover{
     position: relative;
     width: 100%;
     height: 100vh;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     
 }
 .sectin6 .flraalancer_talent{
@@ -867,6 +973,7 @@ header .seller .signUp:hover{
 }
 .sectin6 .info_on_picture .flex i{
     margin-right: 8px;
+   
 }
 
 
@@ -877,7 +984,7 @@ header .seller .signUp:hover{
 }
 .section7 .testmonial{
     text-align: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     height: 72vh;
     width: 50%;
@@ -914,12 +1021,14 @@ header .seller .signUp:hover{
     justify-content: center;
 }
 .section7 .testmonial .name-client .image-client img{
-    width: 60px;
-    height: auto;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    margin-right: 20px;
-    transition: all ease-in-out 0.1s;
+    margin-right: 28px;
     outline-offset: 6px;
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+
 }
 .section7 .testmonial .name-client .image-client .active{
     outline: 2px solid #5BBB7B;
@@ -936,18 +1045,19 @@ header .seller .signUp:hover{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     background-image: url('./images/section8.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     position: relative;
+    margin-top: 6em;
 }
 .section8 .services{
     position: absolute;
     left: 24.5em;
     top: 10em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 70%;
     height: 60vh;
 }
@@ -966,7 +1076,7 @@ header .seller .signUp:hover{
     align-items: end;
 }
 .section8 .services .its_free{
-    width: 28%;
+    width: 30%;
     height: 28vh;
     background-color: #fff;
     box-sizing: border-box;
@@ -980,11 +1090,9 @@ header .seller .signUp:hover{
     line-height: 1.5;
     opacity: 0.9;
 }
-.section8 .services .its_free .post-jop i{
-    font-size: 28px;  
-}
+
 .section8 .services .its_free .post-jop h3{
-    padding-top: 8px;
+    padding-top: 10px;
 }
 .section8 .services .its_free .post-jop p{
     font-size: 12px;
@@ -1012,14 +1120,14 @@ h2{
 .section9 .section-2 .image-service .image-wrapper{
     border: none;
     background: none;
-    height: 70vh;
+    height: 80vh;
 }
 .section9 .section-2 .image-service .image-wrapper:hover{
     border: 1px solid #E9E9E9;
 
 }
 .section9 .section-2 .image-service .image-wrapper .price{
-    padding-top: 8% !important;
+    padding-top: 18% !important;
     font-size: 35px;
     font-weight: 500;
 }
@@ -1115,7 +1223,7 @@ h2{
     top: 0;
 }
 .section10 .image img{
-    height: 500px;
+    height: 490px;
 }
 
 /* --------------------------------------section 11------------------------------------------------- */
@@ -1160,7 +1268,7 @@ footer{
     margin-top: 5em;
     background-color: #222222;
     width: 100%;
-    height: 106vh;
+    height: 103vh;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     box-sizing: border-box;
@@ -1202,7 +1310,7 @@ footer .top_footer .follow_us{
 }
 footer .top_footer .follow_us h2{
     color: #fff;
-    margin-right: 50px;
+    margin-right: 15px;
     font-size: 20px;
 }
 footer .top_footer .follow_us .social_madea{
@@ -1212,26 +1320,27 @@ footer .top_footer .follow_us .social_madea{
 footer .top_footer .follow_us .social_madea a {
     font-size: 20px;
     color: #fff;
-    margin-right: 40px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out 0s;
+    outline: none;
+    border: none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background:none;
+    border-radius: 100%;
+    line-height: 43px;
+
+    
 }
-footer .top_footer .follow_us .social_madea a.none-margin i{
+footer .top_footer .follow_us .social_madea a.none-margin{
     margin-right: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 footer .top_footer .follow_us .social_madea a:hover{
     background-color: #393939;
-    padding: 8px;
-    border-radius: 100%;
 }
-
-/* footer .top_footer .horizantal-line{
-    background-color: #2f2f2f;
-    width: 100%;
-    height: 2vh;
-} */
-
 
 footer .content-in-footer{
     margin-top: 4em;
@@ -1297,6 +1406,7 @@ footer .content-in-footer .subscribe .input_email .send{
     z-index: 100;
     right: -80px;
     top: 10px;
+    opacity: 2;
 }
 footer .content-in-footer .subscribe .input_email .send{
     color: #fff;
@@ -1322,7 +1432,7 @@ footer .content-in-footer .subscribe li.Android i, footer .content-in-footer .su
 
 
 footer .subfooter{
-    margin-top: 35px;
+    margin-top: 30px;
     /* display: flex;
     align-items: center;
     justify-content: space-between;*/
@@ -1331,7 +1441,7 @@ footer .subfooter{
     box-sizing: border-box; */
 
 }
-footer .subfooter span{
+footer .subfooter span.copyright{
     color: #fff;
     opacity: 0.7;
 }
@@ -1357,15 +1467,13 @@ footer .subfooter .languages a:hover{
 }
 footer .subfooter .languages .dropdown{
     position: absolute;
-    z-index: 500;
-    right: -30px;
-   bottom: 48px; 
+
    background-color: #fff;  
-   width: 115px; 
+   width: 0px; 
    padding: 15px 3px;
    border-radius: 5px;
-   opacity: 1;
-   /* transition: all ease-in-out 0.1s; */
+
+   transition: all 0.3s ease-in-out 0s;
    visibility: hidden;
     
 }
@@ -1404,6 +1512,11 @@ footer .subfooter .languages .dropdown::after{
 }
 footer .subfooter .languages:hover .dropdown {
     visibility: visible;
+    
+    z-index: 500;
+    right: -30px;
+   bottom: 48px; 
+   width: 115px;
 
 }
 
