@@ -254,9 +254,9 @@ nav ul li a:hover::before{
     border-radius: 5px;
     height: 0;
     width: 215px !important;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* overflow: hidden; */
-    visibility: hidden;
+    /* overflow: visible !important; */
     transition: all 0.3s ease-in-out 0s;
 }
 .users:hover .Dropdown-menue {
@@ -271,6 +271,26 @@ nav ul li a:hover::before{
 }
 .users:hover .Dropdown-menue ul li.projects {
     position: relative;
+}
+
+/* ---------freelacers------------ */
+.users .fFreelancers{
+    position: relative;
+}
+.users .fFreelancers .Dropdown-menues{
+    position: absolute;
+    top: 100% !important;
+    left:  15em;
+    background-color: #fff;
+    border-top: 1px solid #F0EFEC;
+    border-radius: 5px;
+    height: 0;
+    width: 215px !important;
+    overflow: visible !important;
+    /* box-sizing: border-box; */
+    /* overflow: hidden; */
+    display: none;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 
